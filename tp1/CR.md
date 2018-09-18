@@ -38,8 +38,24 @@ Pour une raison qui nous échappe, le fichier source compile bien mais les image
 PNG en sortie affichent un blanc (pas de graphe). De même, le fichier 'euler_explicite_%2u.png' ne sort pas en plusieurs exemplaires (malgré l'instruction
 format(i)).
 
+**Florian Robert (travail individuel - séance 2)**
+
 ## Séance 2 - Python, Numpy et Matplotlib
 
-2. On considère y' = 1 - y^2 avec t dans [0, 1] et y(0) = 0 :
+2. On considère y' = 1 - y^2 avec t dans [0, 1] :
 
- 
+La solution générale de cette EDO est : y(t) = th(t) avec th la fonction
+tangente hyperbolique définie par :
+
+th(t) = (c*e^2t - 1) / (c*e^2t + 1)
+
+Compte tenu des conditions initiales (CI), on trouve : c = (1+y(0))/(1-y(0))
+
+* Pour y(0) = 0 => c = 1
+* Pour y(0) = 2 => c = - 3
+
+On effectue quelques ajustements au programme en rajoutant :
+* une fonction `sol.th` dans le module *equations* calculant th(t) en fonction
+des CI
+* une fonction `f_para` dans le même module qui encode la dérivée sous la forme
+y'(t) = F(t) = 1-y^2(t)

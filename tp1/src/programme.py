@@ -31,7 +31,7 @@ for i in range(len(h)):
     plt.title("Méthode d'Euler explicite")
     plt.legend()
     plt.show()
-    plt.savefig('euler_explicite.png')
+    #plt.savefig('euler_explicite.png')
 
 # Écriture de l'erreur en fonction de h et impression du graphique
 print("{0} | {1}".format(h,Err))
@@ -42,4 +42,34 @@ plt.ylabel('Err')
 plt.title('Err = f(h) (logarithmique)')
 plt.legend()
 plt.show()
-plt.savefig('Err_fct_h.png')
+#plt.savefig('Err_fct_h.png') Ne fonctionne pas
+
+#Résolution de y' = 1 - y^2
+h = [0.2, 0.1, 0.05, 0.025, 0.0125, 0.00625]
+Err2 = []
+for i in range(len(h)):
+    N=int(T/h[i]) #recalcul du nombre d'itérations par pas
+    [t,y1] = methodes.euler_explicite(t0,h[i],N,y0,equations.f_para)
+    # Solution exacte aux mêmes instants
+    z1 = equations.sol_th(t,y0)
+    # Calcul de l'erreur maximum relative
+    e2 = np.max(np.abs((z1-y1)/z1))
+    Err2.append(e2)
+    
+# Affichage et sauvegarde du graphe des solutions exactes et approchées
+plt.plot(t,y1,'b-+',label='solution approchée h=0.1')
+plt.plot(t,z1,'r-',label='solution exacte')
+plt.xlabel('t')
+plt.ylabel('y')
+plt.title("Méthode d'Euler explicite")
+plt.legend()
+plt.show()
+print("{0} | {1}".format(h,Err2))
+plt.loglog(h,Err2,'b-+')
+plt.grid()
+plt.xlabel('h')
+plt.ylabel('Err2')
+plt.title('Err2 = f(h) (logarithmique)')
+plt.legend()
+plt.show()
+#plt.savefig('euler_explicite.png')

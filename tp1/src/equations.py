@@ -16,6 +16,12 @@ def f_affine(t,y):
 
     """
     return a*y+b
+
+def f_para(t,y):
+    """Fonction affine pour y' = 1 - y^2"""
+    
+    return 1-y**2
+
 def sol_affine(t,y0):
     """Pour une fonction affine, on connait la solution exacte. C'est
     y(t0+s) = y0*exp(a*s) - b*(1-exp(a*s))/a, soit y(t) =
@@ -24,3 +30,11 @@ def sol_affine(t,y0):
     """
     t0 = t[0]
     return y0*np.exp(a*(t-t0)) - b * (1.-np.exp(a*(t-t0)))/a
+
+def sol_th(t,y0):
+    """Pour l'équa diff y' = 1 -y^2 avec y(0)=y0, la solution est y(t) = th(t) = 
+    (c*e^(-2t)-1) / (c*e^(-2t)+1)
+    """
+    
+    c = (1 + y0) / (1 - y0)
+    return (c*np.exp(2*t)-1)/(c*np.exp(2*t)+1)
