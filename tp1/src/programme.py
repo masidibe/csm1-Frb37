@@ -55,15 +55,15 @@ for i in range(len(h)):
     # Calcul de l'erreur maximum relative
     e2 = np.max(np.abs((z1-y1)/z1))
     Err2.append(e2)
+    # Affichage et sauvegarde du graphe des solutions exactes et approchées
+    plt.plot(t,y1,'b-+',label='solution approchée h=0.1')
+    plt.plot(t,z1,'r-',label='solution exacte')
+    plt.xlabel('t')
+    plt.ylabel('y')
+    plt.title("Méthode d'Euler explicite")
+    plt.legend()
+    plt.show()
     
-# Affichage et sauvegarde du graphe des solutions exactes et approchées
-plt.plot(t,y1,'b-+',label='solution approchée h=0.1')
-plt.plot(t,z1,'r-',label='solution exacte')
-plt.xlabel('t')
-plt.ylabel('y')
-plt.title("Méthode d'Euler explicite")
-plt.legend()
-plt.show()
 print("{0} | {1}".format(h,Err2))
 plt.loglog(h,Err2,'b-+')
 plt.grid()

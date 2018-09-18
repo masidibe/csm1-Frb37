@@ -32,11 +32,13 @@ divisée par 2.
 
 **Graphe de Erreur = f(h)**
 
-![Erreur](/src/Err_fct_h.png)
+![Erreur](/src/Err_fct_h_log.png)
 
 Pour une raison qui nous échappe, le fichier source compile bien mais les images
 PNG en sortie affichent un blanc (pas de graphe). De même, le fichier 'euler_explicite_%2u.png' ne sort pas en plusieurs exemplaires (malgré l'instruction
 format(i)).
+
+
 
 **Florian Robert (travail individuel - séance 2)**
 
