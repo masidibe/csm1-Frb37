@@ -32,7 +32,7 @@ divisée par 2.
 
 **Graphe de Erreur = f(h)**
 
-![Erreur](https://github.com/upici/csm1-Frb37/blob/master/tp1/src/Err_fct_h_log.png)
+![Err = f(h) 1](https://github.com/upici/csm1-Frb37/blob/master/tp1/src/Err_fct_h_log.png)
 
 Pour une raison qui nous échappe, le fichier source compile bien mais les images
 PNG en sortie affichent un blanc (pas de graphe). De même, le fichier 'euler_explicite_%2u.png' ne sort pas en plusieurs exemplaires (malgré l'instruction
@@ -67,6 +67,8 @@ CONSTATS :
 * Pour y = 0, l'affichage du graphe logarithmique semble ne pas fonctionner
 (logique !)
 * Pour y = 2, il n'y a aucun problème
+
+![Err = f(h) 2](https://github.com/upici/csm1-Frb37/blob/master/tp1/src/Err_fct_h_log_th.png)
 
 * On constate la convergence rapide de la méthode dans les deux cas
 * Dans les deux cas, l'erreur Err est une fonction linéaire de h (bien que cela
