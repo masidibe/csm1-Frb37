@@ -38,4 +38,8 @@ Pour une raison qui nous échappe, le fichier source compile bien mais les image
 PNG en sortie affichent un blanc (pas de graphe). De même, le fichier 'euler_explicite_%2u.png' ne sort pas en plusieurs exemplaires (malgré l'instruction
 format(i)).
 
-### Séance 2
+## Séance 2 - Python, Numpy et Matplotlib
+
+2. On considère y' = 1 - y^2 avec t dans [0, 1] et y(0) = 0 :
+
+ 

@@ -31,11 +31,12 @@ for i in range(len(h)):
     plt.title("Méthode d'Euler explicite")
     plt.legend()
     plt.show()
-    plt.savefig('euler_explicite_%2u.png'.format(i))
+    plt.savefig('euler_explicite.png')
 
 # Écriture de l'erreur en fonction de h et impression du graphique
 print("{0} | {1}".format(h,Err))
-plt.loglog(h,Err)
+plt.loglog(h,Err,'b-+')
+plt.grid()
 plt.xlabel('h')
 plt.ylabel('Err')
 plt.title('Err = f(h) (logarithmique)')
