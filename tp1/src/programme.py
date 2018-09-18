@@ -10,7 +10,7 @@ import equations
 # Résolution approchée de y' = 1-y avec y(0) = 5 pour t dans [0,1]
 equations.a = -1.
 equations.b = 1.
-t0,y0 = 0.,5.
+t0,y0 = 0.,2.
 T = 1.
 # Avec un pas de 0.2, il faut donc 5 iterations
 h = [0.2, 0.1, 0.05, 0.025]

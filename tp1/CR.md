@@ -61,3 +61,13 @@ On effectue quelques ajustements au programme en rajoutant :
 des CI
 * une fonction `f_para` dans le même module qui encode la dérivée sous la forme
 y'(t) = F(t) = 1-y^2(t)
+
+CONSTATS :
+
+* Pour y = 0, l'affichage du graphe logarithmique semble ne pas fonctionner
+(logique !)
+* Pour y = 2, il n'y a aucun problème
+
+* On constate la convergence rapide de la méthode dans les deux cas
+* Dans les deux cas, l'erreur Err est une fonction linéaire de h (bien que cela
+  soit plus discutable pour la deuxième équation)
