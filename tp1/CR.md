@@ -32,7 +32,7 @@ divisée par 2.
 
 **Graphe de Erreur = f(h)**
 
-![Erreur](/src/Err_fct_h_log.png)
+![Erreur](https://github.com/upici/csm1-Frb37/blob/master/tp1/src/Err_fct_h_log.png)
 
 Pour une raison qui nous échappe, le fichier source compile bien mais les images
 PNG en sortie affichent un blanc (pas de graphe). De même, le fichier 'euler_explicite_%2u.png' ne sort pas en plusieurs exemplaires (malgré l'instruction
