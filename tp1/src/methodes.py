@@ -42,6 +42,6 @@ def RungeKutta(t0,h,N,y0,f):
     
      # On doit faire N itérations en temps
     for k in np.arange(N): # Boucle de 0 à N-1
-        y[k+1] = y[k] + h*f(t[k]+0.5*h,y[k]+0.5*h*f(y[k])) # Formule de la méthode RK2
+        y[k+1] = y[k] + h*f(t[k]+0.5*h,y[k]+0.5*h*f(t[k],y[k])) # Formule de la méthode RK2
 
     return [t,y]
