@@ -73,3 +73,23 @@ plt.title('Err2 = f(h) (logarithmique)')
 plt.legend()
 plt.show()
 #plt.savefig('euler_explicite.png')
+
+#Méthode RK2
+h = [0.2, 0.1, 0.05, 0.025, 0.0125, 0.00625]
+Err2 = []
+for i in range(len(h)):
+    N=int(T/h[i]) #recalcul du nombre d'itérations par pas
+    [t,y1] = methodes.RungeKutta(t0,h[i],N,y0,equations.f_para)
+    # Solution exacte aux mêmes instants
+    z1 = equations.sol_th(t,y0)
+    # Calcul de l'erreur maximum relative
+    e2 = np.max(np.abs((z1-y1)/z1))
+    Err2.append(e2)
+    # Affichage et sauvegarde du graphe des solutions exactes et approchées
+    plt.plot(t,y1,'b-+',label='solution approchée h=0.1')
+    plt.plot(t,z1,'r-',label='solution exacte')
+    plt.xlabel('t')
+    plt.ylabel('y')
+    plt.title("Méthode RK2")
+    plt.legend()
+    plt.show()

@@ -73,3 +73,12 @@ CONSTATS :
 * On constate la convergence rapide de la méthode dans les deux cas
 * Dans les deux cas, l'erreur Err est une fonction linéaire de h (bien que cela
   soit plus discutable pour la deuxième équation)
+
+3. La méthode RK2 est présentée dans le fichier source /src/.programme.py
+
+Pour une raison que je n'arrive pas à comprendre, mon programme refuse de compiler
+et m'affiche le message d'erreur suivant :
+
+y[k+1] = y[k] + h*f(t[k]+0.5*h,y[k]+0.5*h*f(y[k])) # Formule de la méthode RK2
+
+TypeError: f_para() missing 1 required positional argument: 'y'
